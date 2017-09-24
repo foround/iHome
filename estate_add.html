@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>iHome | 管理系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="assets/global/plugins/semantic/semantic.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/plugins/semantic/menu.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="assets/global/css/components.min.css" rel="stylesheet"  type="text/css"/>
+    <!-- END THEME GLOBAL STYLES -->
+    <link href="assets/layouts/layout/css/table-coustom.css" rel="stylesheet"  type="text/css"/>
+    <link href="assets/pages/css/sideBar.css" rel="stylesheet"  type="text/css"/>
+    <!-- BEGIN ICON -->
+    <link rel="shortcut icon" href="assets/pages/img/favicon.ico"/>
+    <link rel="bookmark" href="assets/pages/img/favicon.ico"/>
+    <!-- END ICON -->
+</head>
+<!-- END HEAD -->
+<body class="started pushable">
+<div class="pusher">
+    <div class="ui two column full height grid">
+        <div id="sideBar" class="three wide column">
+
+        </div>
+        <div class="thirteen wide column">
+            <div class="ui table-container">
+                <div class="ui raised segment"><p class="ui red ribbon label">全部内容必填</p>
+                    <div class="ui form" >
+                        <h2 class="ui dividing header">新增小区物业</h2>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp</em>登录账号</label>
+                                <input id="username" placeholder="请输入登录账号" type="text" ng-required="field.isRequired">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp</em>登录密码</label>
+                                <input id="password" placeholder="请输入登录密码" type="password">
+                            </div>
+                        </div>
+                        <div class="three fields">
+                            <div class="field">
+                                <label><em>*&nbsp</em>省</label>
+                                <select id="prov" class="ui search dropdown">
+                                    <option>=请选择省份=</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp</em>市</label>
+                                <select id="city"  class="ui search dropdown disabled">
+                                    <option>=请选择城市=</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp</em>区/县</label>
+                                <select id="country" class="ui search dropdown disabled">
+                                    <option>=请选择县区=</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp</em>小区详细地址</label>
+                                <input id="address" placeholder="请输入小区详细地址" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp</em>小区名称</label>
+                                <input id="name" placeholder="请输入小区名称" type="text">
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp</em>小区经度&nbsp;<a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" class="ui teal tag label small">查询</a></label>
+                                <input id="longitude" placeholder="请输入小区经度" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp</em>小区纬度&nbsp;<a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" class="ui teal tag label small">查询</a></label>
+                                <input id="latitude" placeholder="请输入小区纬度" type="text">
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp</em>联系人</label>
+                                <input id="contact" placeholder="请输入联系人" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp</em>联系电话</label>
+                                <input id="phone" placeholder="请输入联系电话" type="text">
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp;</em>小区简介</label>
+                                <input id="introduction" placeholder="请输入小区简介" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp;</em>小区别名</label>
+                                <input id="aliasName" placeholder="请输入小区别名" type="text">
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp;</em>收费标准（单位：元/小时）</label>
+                                <input id="unitPrice" placeholder="请输入收费标准" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp;</em>担保费（单位：元）</label>
+                                <input id="guaranteeFee" placeholder="请输入担保费" type="text">
+                            </div>
+                        </div>
+                        <div class="three fields">
+                            <div class="field">
+                                <label><em>*&nbsp;</em>业主结算比例（%）</label>
+                                <input id="ownerSettle" placeholder="请输入业主结算比例，必须是正整数（最大值90）" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp;</em>物业结算比例（%）</label>
+                                <input id="estateSettle" placeholder="请输入物业结算比例，必须是正整数（最大值90）" type="text">
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp;</em>平台结算比例（%）</label>
+                                <input id="platformSettle" placeholder="请输入平台结算比例，必须是正整数（最大值90）" type="text">
+                            </div>
+                        </div>
+                        <h4 class="ui dividing header"></h4>
+                        <button id="estateOfSubmit" class="ui primary button">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui small modal message">
+    <div class="header">提交成功 </div>
+    <div class="content">
+        <p>已成功提交小区物业信息</p>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">关闭 </div>
+    </div>
+</div>
+
+<!-- BEGIN CORE PLUGINS -->
+<script src="assets/global/scripts/angular.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/core.js" type="text/javascript"></script>
+<script src="assets/global/plugins/sha256.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/semantic/semantic.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/semantic/dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.tablesort.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script src="assets/global/plugins/city.js" type="text/javascript"></script>
+<script src="assets/pages/scripts/estate-add.js" type="text/javascript"></script>
+<script src="assets/pages/scripts/sideBar.js" type="text/javascript"></script>
+</body>
+
+</html>

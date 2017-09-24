@@ -1,0 +1,23 @@
+.table-container {
+    padding: 40px;
+}
+
+em {
+    color: red;
+}
+
+.sideBar {
+    height: 1600px!important;
+    padding-top: 20px
+}
+
+.ui.action.input input[type="file"] {
+    display: none;
+}
+input.ng-invalid {
+    border: 1px solid red;
+}
+
+input.ng-valid {
+    border: 1px solid green;
+}

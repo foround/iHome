@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>iHome | 管理系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="assets/global/plugins/semantic/semantic.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/global/plugins/semantic/menu.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="assets/global/css/components.min.css" rel="stylesheet"  type="text/css"/>
+    <!-- END THEME GLOBAL STYLES -->
+    <link href="assets/layouts/layout/css/table-coustom.css" rel="stylesheet"  type="text/css"/>
+    <link href="assets/pages/css/sideBar.css" rel="stylesheet"  type="text/css" />
+    <!-- BEGIN ICON -->
+    <link rel="shortcut icon" href="assets/pages/img/favicon.ico"/>
+    <link rel="bookmark" href="assets/pages/img/favicon.ico"/>
+    <!-- END ICON -->
+</head>
+<!-- END HEAD -->
+<body class="started pushable">
+<div class="pusher">
+    <div class="ui two column full height grid">
+        <div id="sideBar" class="three wide column">
+
+        </div>
+        <div class="thirteen wide column">
+            <div class="ui table-container">
+                <div class="ui raised segment"><p class="ui red ribbon label">全部内容必填</p>
+                    <div class="ui form">
+                        <h2 class="ui dividing header">上传小区导航图与通行证</h2>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp</em>小区名称</label>
+                                <select id="prov" class="ui search dropdown">
+                                    <option>=请选择小区=</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label><em>*&nbsp;</em>上传小区导航图</label>
+                                <div class="ui action input">
+                                    <input type="text" placeholder="上传小区导航图" readonly>
+                                    <input id="navigation" type="file">
+                                    <div class="ui icon button">
+                                        <i class="attach icon"></i>
+                                    </div>
+                                    <button id="navigationOfUpload" class="ui right labeled icon button green">
+                                        <i class="up arrow icon"></i>
+                                        上传
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label><em>*&nbsp;</em>上传通行证</label>
+                                <div class="ui action input">
+                                    <input type="text" placeholder="上传通行证" readonly>
+                                    <input id="pass" type="file">
+                                    <div class="ui icon button">
+                                        <i class="attach icon"></i>
+                                    </div>
+                                    <button id="passOfUpload" class="ui right labeled icon button green">
+                                        <i class="up arrow icon"></i>
+                                        上传
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui small modal message">
+    <div class="header">提交成功 </div>
+    <div class="content">
+        <p>已成功提交小区物业导航图</p>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">关闭 </div>
+    </div>
+</div>
+<div class="ui small modal pass">
+    <div class="header">提交成功 </div>
+    <div class="content">
+        <p>已成功提交通信证</p>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">关闭 </div>
+    </div>
+</div>
+<div class="ui small modal error">
+    <div class="header">提交失败 </div>
+    <div class="content">
+        <p>网络错误</p>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">关闭 </div>
+    </div>
+</div>
+
+<!-- BEGIN CORE PLUGINS -->
+<script src="assets/global/scripts/angular.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/core.js" type="text/javascript"></script>
+<script src="assets/global/plugins/sha256.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/semantic/semantic.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/semantic/dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.tablesort.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script src="assets/global/plugins/city.js" type="text/javascript"></script>
+<script src="assets/pages/scripts/pic-add.js" type="text/javascript"></script>
+</body>
+
+</html>

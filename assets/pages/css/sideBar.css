@@ -1,0 +1,29 @@
+.sidebar-background{
+    background-color: rgb(47,49,139) !important;
+    width: 100% !important;
+}
+@media screen and (max-width: 800px) {
+    .item .sidebar-invisible{
+        display: none;
+    }
+    .item .icon{
+        font-size: 1.5em;
+    }
+    .sidebar-background{
+        width: 3.5rem !important;
+    }
+    #logout{
+        background-color: transparent;
+        border: 0;
+        color: rgba(255,255,255,0.5);
+        width: 0;
+    }
+    #logout i{
+        width: 1em;
+    }
+    #logout .icon{
+        font-size: 1.3em;
+        background-color: transparent;
+        left: -4px;
+    }
+}
